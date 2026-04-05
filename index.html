@@ -27,15 +27,18 @@
             color: white;
             text-align: center;
         }
+
         .card {
             margin-bottom: 20px;
             transition: 0.3s;
             border-radius: 10px;
             box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
         }
+
         .card:hover {
             transform: scale(1.03);
         }
+
         .note-box {
             background-color: #fff3cd;
             border-left: 5px solid #ffecb5;
@@ -45,14 +48,54 @@
             border-radius: 4px;
             font-family: sans-serif;
         }
+
         .Info {
             max-width: 1000px;
             margin: auto;
             background: rgba(255, 255, 255, 1);
             padding: 40px;
             border-radius: 20px;
-            box-shadow: 0 15px 35px rgba(0.1, 0.1, 0.1, 0.1);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
             border-left: 5px solid #4e9670;
+        }
+
+        .card a {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
+        .card a:hover {
+            color: #4e9670;
+        }
+
+        .carousel {
+            margin: 40px auto;
+            max-width: 1100px;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .carousel-img {
+            height: 450px;
+            object-fit: cover;
+            filter: brightness(70%);
+        }
+
+        .carousel-caption {
+            bottom: 20%;
+        }
+
+        .carousel-caption h3 {
+            font-size: 2rem;
+            font-weight: bold;
+            font-family: 'Kanit', sans-serif;
+        }
+
+        .carousel-caption p {
+            font-size: 1.1rem;
+            font-family: 'Anuphan', sans-serif;
         }
     </style>
 </head>
@@ -70,7 +113,8 @@
             <div class="collapse navbar-collapse" id="menu">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="https://project-bice-omega-57.vercel.app/680710824.html">หน้ามหาลัย</a>
+                        <a class="nav-link"
+                            href="https://project-bice-omega-57.vercel.app/680710824.html">หน้ามหาลัย</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="https://123-theta-gold.vercel.app/Nay.html">แยกมาลัยแมน</a>
@@ -92,8 +136,47 @@
         <h1>เส้นทางรถรอบ ม.ศิลปากร สนามจันทร์</h1>
         <p>รวมข้อมูลรถตู้ มินิบัส และรถท้องถิ่น</p>
     </div>
-    </div>
+    <div id="transportCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="3000">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#transportCarousel" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#transportCarousel" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#transportCarousel" data-bs-slide-to="2"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="https://f.ptcdn.info/559/059/000/peiwwtsf3GKq0caC5IS-o.jpg" class="d-block w-100 carousel-img"
+                    alt="มหาวิทยาลัยศิลปากร">
+                <div class="carousel-caption">
+                    <h3>เดินทางรอบมหาวิทยาลัย</h3>
+                    <p>รวมเส้นทางรถที่ผ่าน ม.ศิลปากร สนามจันทร์</p>
+                </div>
+            </div>
 
+            <div class="carousel-item">
+                <img src="https://gogo.town/wp-content/uploads/2023/03/bangkok-nakhonpathom-silpakorn-minibus-870x555.jpg"
+                    class="d-block w-100 carousel-img" alt="รถโดยสาร">
+                <div class="carousel-caption">
+                    <h3>รวมข้อมูลรถตู้และมินิบัส</h3>
+                    <p>ค้นหาเส้นทางที่สะดวกสำหรับการเดินทาง</p>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <img src="https://suclean.su.ac.th/web/images/images_about/sanamchandra_map.jpg"
+                    class="d-block w-100 carousel-img" alt="แผนที่เส้นทาง">
+                <div class="carousel-caption">
+                    <h3>ดูแผนที่และตารางรถ</h3>
+                    <p>ช่วยวางแผนการเดินทางได้ง่ายขึ้น</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#transportCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#transportCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
     <div class="Info">
         <div class="note-box">
             <strong>หมายเหตุ:</strong> ข้อมูลในเว็บกับรอบรถจริงอาจคลาดเคลื่อน
@@ -106,45 +189,45 @@
 
                 <div class="col-md-6 text-center">
                     <div class="card">
-                        <div class="card-body">
-                            <a href="https://project-bice-omega-57.vercel.app/680710824.html" target="_blank">
+                        <a href="https://project-bice-omega-57.vercel.app/680710824.html" target="_blank">
+                            <div class="card-body">
                                 <h5>หน้ามหาลัย</h5>
                                 <p>ถนนทรงพล</p>
-                            </a>
-                        </div>
+                            </div>
+                        </a>
                     </div>
                 </div>
 
                 <div class="col-md-6 text-center">
                     <div class="card">
-                        <div class="card-body">
-                            <a href="https://123-theta-gold.vercel.app/Nay.html" target="_blank">                                
-                            <h5>ถนนมาลัยแมน</h5>
-                            <p>แยกมาลัยแมน</p>
-                            </a>
-                        </div>
+                        <a href="https://123-theta-gold.vercel.app/Nay.html" target="_blank">
+                            <div class="card-body">
+                                <h5>ถนนมาลัยแมน</h5>
+                                <p>แยกมาลัยแมน</p>
+                            </div>
+                        </a>
                     </div>
                 </div>
-                
+
                 <div class="col-md-12 text-center">
                     <div class="card">
-                        <div class="card-body">
-                            <a href="https://bbb-liard-kappa.vercel.app/" target="_blank">
+                        <a href="https://bbb-liard-kappa.vercel.app/" target="_blank">
+                            <div class="card-body">
                                 <h5>แผนที่มหาวิทยาลัย</h5>
                                 <p>ม.ศิลปากร สนามจันทร์</p>
-                            </a>
-                        </div>
+                            </div>
+                        </a>
                     </div>
                 </div>
-                
+
                 <div class="col-md-12 text-center">
                     <div class="card">
-                        <div class="card-body">
-                            <a href="https://bus-six-phi.vercel.app/bus.html" target="_blank">  
+                        <a href="https://bus-six-phi.vercel.app/bus.html" target="_blank">
+                            <div class="card-body">
                                 <h5>ตารางรถ</h5>
                                 <p>ม.ศิลปากร สนามจันทร์</p>
-                            </a>
-                        </div>
+                            </div>
+                        </a>
                     </div>
                 </div>
 
